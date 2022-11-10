@@ -1,0 +1,174 @@
+===========================================================================
+Action Sequence - Plugin Commands
+============================================================================
+
+Skills and items, when used in battle, have a pre-determined series of
+actions to display to the player as a means of representing what's going on
+with the action. For some game devs, this may not be enough and they would
+like to get more involved with the actions themselves.
+
+Action Sequences, added through this plugin, enable this. To give a skill or
+item a Custom Action Sequence, a couple of steps must be followed:
+
+---
+
+1. Insert the <Custom Action Sequence> notetag into the skill or item's
+   notebox (or else this would not work as intended).
+2. Give that skill/item a Common Event through the Effects box. The selected
+   Common Event will contain all the Action Sequence data.
+3. Create the Common Event with Action Sequence Plugin Commands and/or event
+   commands to make the skill/item do what you want it to do.
+
+---
+
+The Plugin Commands added through the Battle Core plugin focus entirely on
+Action Sequences. However, despite the fact that they're made for skills and
+items, some of these Action Sequence Plugin Commands can still be used for
+regular Troop events and Common Events.
+
+---
+
+=== Action Sequence - Action Sets ===
+
+Action Sequence Action Sets are groups of commonly used
+Action Sequence Commands put together for more efficient usage.
+
+---
+
+ACSET: Setup Action Set
+- The generic start to most actions.
+
+  Display Action:
+  Immortal: On:
+  Battle Step:
+  Wait For Movement:
+  Cast Animation:
+  Wait For Animation:
+  - Use this part of the action sequence?
+
+---
+
+ACSET: All Targets Action Set
+- Affects all targets simultaneously performing the following.
+
+  Dual/Multi Wield?
+  - Add times struck based on weapon quantity equipped?
+
+  Perform Action:
+  Wait Count:
+  Action Animation:
+  Wait For Animation:
+  Action Effect:
+  Immortal: Off:
+  - Use this part of the action sequence?
+  - Insert values for the Wait Count(s).
+
+---
+
+ACSET: Each Target Action Set
+- Goes through each target one by one to perform the following.
+
+  Dual/Multi Wield?
+  - Add times struck based on weapon quantity equipped?
+
+  Perform Action:
+  Wait Count:
+  Action Animation:
+  Wait Count:
+  Action Effect:
+  Immortal: Off:
+  - Use this part of the action sequence?
+  - Insert values for the Wait Count(s).
+
+---
+
+ACSET: Finish Action
+- The generic ending to most actions.
+
+  Wait For New Line:
+  Wait For Effects:
+  Clear Battle Log:
+  Home Reset:
+  Wait For Movement:
+  - Use this part of the action sequence?
+
+
+=== Action Sequences - Movement ===
+
+These Action Sequences allow you the ability to control the sprites of
+actors and enemies in battle.
+
+---
+
+MOVE: Battle Step
+- Causes the unit(s) to move forward past their home position to prepare
+  for action.
+
+  Targets:
+  - Select which unit(s) to move.
+
+  Wait For Movement?:
+  - Wait for movement to complete before performing next command?
+
+---
+
+MOVE: Change Home By Distance
+- Change unit(s)'s home position by a distance from their current home
+  position(s).
+- Sideview-only!
+
+  Targets:
+  - Select which unit(s) to change home position(s) for.
+
+  Distance Adjustment:
+  - Makes adjustments to distance values to determine which direction to
+    change by.
+    - Normal - No adjustments made
+    - Horizontal - Actors adjust left, Enemies adjust right
+    - Vertical - Actors adjust Up, Enemies adjust down
+    - Both - Applies both Horizontal and Vertical
+
+    Distance: X:
+    - Horizontal distance to move.
+    - You may use JavaScript code.
+
+    Distance: Y:
+    - Vertical distance to move.
+    - You may use JavaScript code.
+
+  Duration:
+  - Duration in frames for total change amount.
+
+  Face Destination?:
+  - Turn and face the destination?
+
+  Movement Easing:
+  - Select which easing type you wish to apply.
+  - Requires VisuMZ_0_CoreEngine.
+
+  Movement Motion:
+  - Play this motion for the unit(s).
+
+  Wait For Movement?:
+  - Wait for movement to complete before performing next command?
+
+MOVE: Opacity
+- Causes the unit(s) to change opacity.
+- Sideview-only!
+
+  Targets:
+  - Select which unit(s) to change opacity.
+
+  Desired Opacity:
+  - Change to this opacity value.
+  - You may use JavaScript code.
+
+  Duration:
+  - Duration in frames for opacity change.
+
+  Opacity Easing:
+  - Select which easing type you wish to apply.
+  - Requires VisuMZ_0_CoreEngine.
+
+  Wait For Opacity?:
+  - Wait for opacity changes to complete before performing next command?
