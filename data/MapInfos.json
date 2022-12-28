@@ -1,6 +1,6 @@
 [
 null,
-{"id":1,"expanded":false,"name":"Lake","order":3,"parentId":3,"scrollX":816,"scrollY":624},
-{"id":2,"expanded":true,"name":"Woods","order":2,"parentId":3,"scrollX":1063.7142857142856,"scrollY":1357.7142857142856},
-{"id":3,"expanded":false,"name":"Toilet_World_Entry","order":1,"parentId":0,"scrollX":0,"scrollY":0}
+{"id":1,"expanded":false,"name":"Lake","order":3,"parentId":3,"scrollX":813,"scrollY":348.5},
+{"id":2,"expanded":true,"name":"Woods","order":2,"parentId":3,"scrollX":1293,"scrollY":580.5},
+{"id":3,"expanded":true,"name":"Toilet_World_Entry","order":1,"parentId":0,"scrollX":619,"scrollY":340.5}
 ]
