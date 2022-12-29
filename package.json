@@ -3,7 +3,7 @@
     "main": "index.html",
     "chromium-args": "--force-color-profile=srgb",
     "window": {
-        "title": "antioch game mz",
+        "title": "There Is A Fantasy World In My Toilet",
         "width": 816,
         "height": 624,
         "position": "center",
