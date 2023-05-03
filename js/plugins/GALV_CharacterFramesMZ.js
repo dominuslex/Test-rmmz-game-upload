@@ -19,7 +19,7 @@ Galv.CF.pluginName = "GALV_CharacterFramesMZ";
 
 //-----------------------------------------------------------------------------
 /*:
- * @plugindesc Enables map character sheets to have more frames per character.
+ * @plugindesc (v.1.0) Enables map character sheets to have more frames per character.
  * @url http://galvs-scripts.com
  * @target MZ
  * @author Galv
