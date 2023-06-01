@@ -5963,7 +5963,7 @@ Window_ActorCommand.prototype.makeCommandList = function() {
     if (this._actor) {
         this.addAttackCommand();
         this.addSkillCommands();
-        this.addGuardCommand();
+        //this.addGuardCommand();
         this.addItemCommand();
     }
 };
@@ -5980,9 +5980,9 @@ Window_ActorCommand.prototype.addSkillCommands = function() {
     }
 };
 
-Window_ActorCommand.prototype.addGuardCommand = function() {
+/* Window_ActorCommand.prototype.addGuardCommand = function() {
     this.addCommand(TextManager.guard, "guard", this._actor.canGuard());
-};
+}; */
 
 Window_ActorCommand.prototype.addItemCommand = function() {
     this.addCommand(TextManager.item, "item");
